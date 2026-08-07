@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: spring-boot-starter-smart-mvc-example
+  smart:
+    mvc:
+      exception:
+        enabled: true
+        status-mode: HTTP_STATUS
+      response:
+        wrap-enabled: true
+        wrap-void: true
+        success-message: success
+        long-as-string: true
+      date-time:
+        zone-id: Asia/Shanghai
+        request-format: yyyy-MM-dd HH:mm:ss
+        incomplete-input-policy: FILL_MISSING
+        response-format: yyyy-MM-dd HH:mm:ss
+        date-request-format: yyyy-MM-dd
+        date-response-format: yyyy-MM-dd
+        time-request-format: HH:mm:ss
+        time-response-format: HH:mm:ss
+      validation:
+        enabled: true
+      request-log:
+        enabled: true
+        level: INFO
+      auth:
+        enabled: true
+        mode: GLOBAL
+        check-request-permission: true
+        authorization-header: Authorization
+        token-prefix: Bearer
+        exclude-paths: []
+
+logging:
+  file:
+    name: logs/spring-boot-starter-smart-mvc-example.log

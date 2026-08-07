@@ -1,0 +1,377 @@
+2026-08-06T11:02:13.329+08:00  INFO 32970 --- [spring-boot-starter-smart-mvc-example] [main] .i.m.SmartMvcSpringBootStarterExampleApp : Starting SmartMvcSpringBootStarterExampleApp using Java 25 with PID 32970 (/Users/xiatian/projects/GitHub/smart-mvc/spring-boot-starter-smart-mvc-example/target/classes started by xiatian in /Users/xiatian/projects/GitHub/smart-mvc)
+2026-08-06T11:02:13.330+08:00  INFO 32970 --- [spring-boot-starter-smart-mvc-example] [main] .i.m.SmartMvcSpringBootStarterExampleApp : No active profile set, falling back to 1 default profile: "default"
+2026-08-06T11:02:13.607+08:00  WARN 32970 --- [spring-boot-starter-smart-mvc-example] [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[ink.icoding.mvc]' package. Please check your configuration.
+2026-08-06T11:02:13.734+08:00  INFO 32970 --- [spring-boot-starter-smart-mvc-example] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-08-06T11:02:13.742+08:00  INFO 32970 --- [spring-boot-starter-smart-mvc-example] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-06T11:02:13.742+08:00  INFO 32970 --- [spring-boot-starter-smart-mvc-example] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-08-06T11:02:13.760+08:00  INFO 32970 --- [spring-boot-starter-smart-mvc-example] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-08-06T11:02:13.760+08:00  INFO 32970 --- [spring-boot-starter-smart-mvc-example] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 407 ms
+2026-08-06T11:02:13.905+08:00  WARN 32970 --- [spring-boot-starter-smart-mvc-example] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2026-08-06T11:02:13.906+08:00  INFO 32970 --- [spring-boot-starter-smart-mvc-example] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-08-06T11:02:13.913+08:00  INFO 32970 --- [spring-boot-starter-smart-mvc-example] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-08-06T11:02:13.924+08:00 ERROR 32970 --- [spring-boot-starter-smart-mvc-example] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2026-08-06T11:07:45.794+08:00  INFO 34410 --- [spring-boot-starter-smart-mvc-example] [main] .i.m.SmartMvcSpringBootStarterExampleApp : Starting SmartMvcSpringBootStarterExampleApp using Java 25 with PID 34410 (/Users/xiatian/projects/GitHub/smart-mvc/spring-boot-starter-smart-mvc-example/target/classes started by xiatian in /Users/xiatian/projects/GitHub/smart-mvc)
+2026-08-06T11:07:45.795+08:00  INFO 34410 --- [spring-boot-starter-smart-mvc-example] [main] .i.m.SmartMvcSpringBootStarterExampleApp : No active profile set, falling back to 1 default profile: "default"
+2026-08-06T11:07:46.101+08:00  INFO 34410 --- [spring-boot-starter-smart-mvc-example] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-08-06T11:07:46.107+08:00  INFO 34410 --- [spring-boot-starter-smart-mvc-example] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-06T11:07:46.107+08:00  INFO 34410 --- [spring-boot-starter-smart-mvc-example] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-08-06T11:07:46.121+08:00  INFO 34410 --- [spring-boot-starter-smart-mvc-example] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-08-06T11:07:46.121+08:00  INFO 34410 --- [spring-boot-starter-smart-mvc-example] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 301 ms
+2026-08-06T11:07:46.240+08:00  WARN 34410 --- [spring-boot-starter-smart-mvc-example] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-08-06T11:07:46.246+08:00  INFO 34410 --- [spring-boot-starter-smart-mvc-example] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-08-06T11:07:46.251+08:00 ERROR 34410 --- [spring-boot-starter-smart-mvc-example] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2026-08-06T11:08:21.104+08:00  INFO 34465 --- [spring-boot-starter-smart-mvc-example] [main] .i.m.SmartMvcSpringBootStarterExampleApp : Starting SmartMvcSpringBootStarterExampleApp using Java 25 with PID 34465 (/Users/xiatian/projects/GitHub/smart-mvc/spring-boot-starter-smart-mvc-example/target/classes started by xiatian in /Users/xiatian/projects/GitHub/smart-mvc)
+2026-08-06T11:08:21.105+08:00  INFO 34465 --- [spring-boot-starter-smart-mvc-example] [main] .i.m.SmartMvcSpringBootStarterExampleApp : No active profile set, falling back to 1 default profile: "default"
+2026-08-06T11:08:21.403+08:00  INFO 34465 --- [spring-boot-starter-smart-mvc-example] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-08-06T11:08:21.411+08:00  INFO 34465 --- [spring-boot-starter-smart-mvc-example] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-06T11:08:21.411+08:00  INFO 34465 --- [spring-boot-starter-smart-mvc-example] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-08-06T11:08:21.427+08:00  INFO 34465 --- [spring-boot-starter-smart-mvc-example] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-08-06T11:08:21.427+08:00  INFO 34465 --- [spring-boot-starter-smart-mvc-example] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 301 ms
+2026-08-06T11:08:21.566+08:00  INFO 34465 --- [spring-boot-starter-smart-mvc-example] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2026-08-06T11:08:21.570+08:00  INFO 34465 --- [spring-boot-starter-smart-mvc-example] [main] .i.m.SmartMvcSpringBootStarterExampleApp : Started SmartMvcSpringBootStarterExampleApp in 0.664 seconds (process running for 1.276)
+2026-08-06T11:09:09.135+08:00  INFO 34465 --- [spring-boot-starter-smart-mvc-example] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-06T11:09:09.143+08:00  INFO 34465 --- [spring-boot-starter-smart-mvc-example] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-08-06T13:42:20.589+08:00  INFO 42150 --- [spring-boot-starter-smart-mvc-example] [main] .i.m.SmartMvcSpringBootStarterExampleApp : Starting SmartMvcSpringBootStarterExampleApp using Java 25 with PID 42150 (/Users/xiatian/projects/GitHub/smart-mvc/spring-boot-starter-smart-mvc-example/target/classes started by xiatian in /Users/xiatian/projects/GitHub/smart-mvc)
+2026-08-06T13:42:20.590+08:00  INFO 42150 --- [spring-boot-starter-smart-mvc-example] [main] .i.m.SmartMvcSpringBootStarterExampleApp : No active profile set, falling back to 1 default profile: "default"
+2026-08-06T13:42:20.910+08:00  INFO 42150 --- [spring-boot-starter-smart-mvc-example] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-08-06T13:42:20.917+08:00  INFO 42150 --- [spring-boot-starter-smart-mvc-example] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-06T13:42:20.917+08:00  INFO 42150 --- [spring-boot-starter-smart-mvc-example] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-08-06T13:42:20.933+08:00  INFO 42150 --- [spring-boot-starter-smart-mvc-example] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-08-06T13:42:20.933+08:00  INFO 42150 --- [spring-boot-starter-smart-mvc-example] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 319 ms
+2026-08-06T13:42:21.070+08:00  INFO 42150 --- [spring-boot-starter-smart-mvc-example] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2026-08-06T13:42:21.075+08:00  INFO 42150 --- [spring-boot-starter-smart-mvc-example] [main] .i.m.SmartMvcSpringBootStarterExampleApp : Started SmartMvcSpringBootStarterExampleApp in 0.673 seconds (process running for 1.945)
+2026-08-06T13:42:26.695+08:00  INFO 42150 --- [spring-boot-starter-smart-mvc-example] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-06T13:42:26.699+08:00  INFO 42150 --- [spring-boot-starter-smart-mvc-example] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-08-06T14:10:55.069+08:00  INFO 44296 --- [spring-boot-starter-smart-mvc-example] [main] .i.m.SmartMvcSpringBootStarterExampleApp : Starting SmartMvcSpringBootStarterExampleApp using Java 25 with PID 44296 (/Users/xiatian/projects/GitHub/smart-mvc/spring-boot-starter-smart-mvc-example/target/classes started by xiatian in /Users/xiatian/projects/GitHub/smart-mvc)
+2026-08-06T14:10:55.070+08:00  INFO 44296 --- [spring-boot-starter-smart-mvc-example] [main] .i.m.SmartMvcSpringBootStarterExampleApp : No active profile set, falling back to 1 default profile: "default"
+2026-08-06T14:10:55.392+08:00  INFO 44296 --- [spring-boot-starter-smart-mvc-example] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-08-06T14:10:55.399+08:00  INFO 44296 --- [spring-boot-starter-smart-mvc-example] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-06T14:10:55.399+08:00  INFO 44296 --- [spring-boot-starter-smart-mvc-example] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-08-06T14:10:55.414+08:00  INFO 44296 --- [spring-boot-starter-smart-mvc-example] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-08-06T14:10:55.414+08:00  INFO 44296 --- [spring-boot-starter-smart-mvc-example] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 328 ms
+2026-08-06T14:10:55.566+08:00  INFO 44296 --- [spring-boot-starter-smart-mvc-example] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2026-08-06T14:10:55.571+08:00  INFO 44296 --- [spring-boot-starter-smart-mvc-example] [main] .i.m.SmartMvcSpringBootStarterExampleApp : Started SmartMvcSpringBootStarterExampleApp in 0.693 seconds (process running for 2.023)
+2026-08-06T14:11:12.876+08:00  INFO 44296 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-06T14:11:12.878+08:00  INFO 44296 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-06T14:11:12.880+08:00  INFO 44296 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-08-06T14:11:12.942+08:00  INFO 44296 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-1] i.i.mvc.logging.RequestLoggingFilter     : HTTP GET / -> 404 (58 ms)
+2026-08-06T14:11:13.200+08:00  INFO 44296 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-2] i.i.mvc.logging.RequestLoggingFilter     : HTTP GET /favicon.ico -> 404 (34 ms)
+2026-08-06T14:11:27.169+08:00  INFO 44296 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-3] i.i.mvc.logging.RequestLoggingFilter     : HTTP GET /.well-known/appspecific/com.chrome.devtools.json -> 404 (2 ms)
+2026-08-06T14:11:29.113+08:00  INFO 44296 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-4] i.i.mvc.logging.RequestLoggingFilter     : HTTP GET / -> 404 (1 ms)
+2026-08-06T14:11:29.157+08:00  INFO 44296 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-5] i.i.mvc.logging.RequestLoggingFilter     : HTTP GET /.well-known/appspecific/com.chrome.devtools.json -> 404 (10 ms)
+2026-08-06T14:11:44.293+08:00  INFO 44296 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-6] i.i.mvc.logging.RequestLoggingFilter     : HTTP GET / -> 404 (16 ms)
+2026-08-06T14:11:44.409+08:00  INFO 44296 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-7] i.i.mvc.logging.RequestLoggingFilter     : HTTP GET /.well-known/appspecific/com.chrome.devtools.json -> 404 (37 ms)
+2026-08-06T14:11:57.100+08:00  INFO 44296 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-8] i.i.mvc.logging.RequestLoggingFilter     : HTTP GET /api/v1/aaa -> 404 (2 ms)
+2026-08-06T14:11:57.138+08:00  INFO 44296 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-9] i.i.mvc.logging.RequestLoggingFilter     : HTTP GET /.well-known/appspecific/com.chrome.devtools.json -> 404 (9 ms)
+2026-08-06T14:36:52.032+08:00  INFO 44296 --- [spring-boot-starter-smart-mvc-example] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-06T14:36:52.045+08:00  INFO 44296 --- [spring-boot-starter-smart-mvc-example] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-08-06T14:36:56.114+08:00  INFO 46506 --- [spring-boot-starter-smart-mvc-example] [main] .i.m.SmartMvcSpringBootStarterExampleApp : Starting SmartMvcSpringBootStarterExampleApp using Java 25 with PID 46506 (/Users/xiatian/projects/GitHub/smart-mvc/spring-boot-starter-smart-mvc-example/target/classes started by xiatian in /Users/xiatian/projects/GitHub/smart-mvc)
+2026-08-06T14:36:56.115+08:00  INFO 46506 --- [spring-boot-starter-smart-mvc-example] [main] .i.m.SmartMvcSpringBootStarterExampleApp : No active profile set, falling back to 1 default profile: "default"
+2026-08-06T14:36:56.424+08:00  INFO 46506 --- [spring-boot-starter-smart-mvc-example] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-08-06T14:36:56.430+08:00  INFO 46506 --- [spring-boot-starter-smart-mvc-example] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-06T14:36:56.430+08:00  INFO 46506 --- [spring-boot-starter-smart-mvc-example] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-08-06T14:36:56.446+08:00  INFO 46506 --- [spring-boot-starter-smart-mvc-example] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-08-06T14:36:56.447+08:00  INFO 46506 --- [spring-boot-starter-smart-mvc-example] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 316 ms
+2026-08-06T14:36:56.595+08:00  INFO 46506 --- [spring-boot-starter-smart-mvc-example] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2026-08-06T14:36:56.599+08:00  INFO 46506 --- [spring-boot-starter-smart-mvc-example] [main] .i.m.SmartMvcSpringBootStarterExampleApp : Started SmartMvcSpringBootStarterExampleApp in 0.666 seconds (process running for 1.932)
+2026-08-06T14:37:02.404+08:00  INFO 46506 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-06T14:37:02.405+08:00  INFO 46506 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-06T14:37:02.406+08:00  INFO 46506 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-08-06T14:37:02.472+08:00  INFO 46506 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-1] i.i.mvc.logging.RequestLoggingFilter     : HTTP GET /example -> 404 (62 ms)
+2026-08-06T14:37:02.612+08:00  INFO 46506 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-2] i.i.mvc.logging.RequestLoggingFilter     : HTTP GET /.well-known/appspecific/com.chrome.devtools.json -> 404 (6 ms)
+2026-08-06T14:37:11.970+08:00  INFO 46506 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-3] i.i.mvc.logging.RequestLoggingFilter     : HTTP GET /example/response -> 200 (16 ms)
+2026-08-06T14:37:12.042+08:00  INFO 46506 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-4] i.i.mvc.logging.RequestLoggingFilter     : HTTP GET /.well-known/appspecific/com.chrome.devtools.json -> 404 (9 ms)
+2026-08-06T14:39:05.695+08:00  INFO 46506 --- [spring-boot-starter-smart-mvc-example] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-06T14:39:05.704+08:00  INFO 46506 --- [spring-boot-starter-smart-mvc-example] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-08-06T14:39:09.829+08:00  INFO 46768 --- [spring-boot-starter-smart-mvc-example] [main] .i.m.SmartMvcSpringBootStarterExampleApp : Starting SmartMvcSpringBootStarterExampleApp using Java 25 with PID 46768 (/Users/xiatian/projects/GitHub/smart-mvc/spring-boot-starter-smart-mvc-example/target/classes started by xiatian in /Users/xiatian/projects/GitHub/smart-mvc)
+2026-08-06T14:39:09.831+08:00  INFO 46768 --- [spring-boot-starter-smart-mvc-example] [main] .i.m.SmartMvcSpringBootStarterExampleApp : No active profile set, falling back to 1 default profile: "default"
+2026-08-06T14:39:10.202+08:00  INFO 46768 --- [spring-boot-starter-smart-mvc-example] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-08-06T14:39:10.208+08:00  INFO 46768 --- [spring-boot-starter-smart-mvc-example] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-06T14:39:10.208+08:00  INFO 46768 --- [spring-boot-starter-smart-mvc-example] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-08-06T14:39:10.224+08:00  INFO 46768 --- [spring-boot-starter-smart-mvc-example] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-08-06T14:39:10.224+08:00  INFO 46768 --- [spring-boot-starter-smart-mvc-example] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 375 ms
+2026-08-06T14:39:10.379+08:00  INFO 46768 --- [spring-boot-starter-smart-mvc-example] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2026-08-06T14:39:10.384+08:00  INFO 46768 --- [spring-boot-starter-smart-mvc-example] [main] .i.m.SmartMvcSpringBootStarterExampleApp : Started SmartMvcSpringBootStarterExampleApp in 0.754 seconds (process running for 2.134)
+2026-08-06T14:39:14.722+08:00  INFO 46768 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-06T14:39:14.722+08:00  INFO 46768 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-06T14:39:14.723+08:00  INFO 46768 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-08-06T14:39:14.762+08:00  INFO 46768 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-1] i.i.mvc.logging.RequestLoggingFilter     : HTTP GET /example/response -> 200 (38 ms)
+2026-08-06T14:39:14.846+08:00  INFO 46768 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-2] i.i.mvc.logging.RequestLoggingFilter     : HTTP GET /.well-known/appspecific/com.chrome.devtools.json -> 404 (45 ms)
+2026-08-06T14:40:12.185+08:00  INFO 46768 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-3] i.i.mvc.logging.RequestLoggingFilter     : HTTP GET /example/time -> 400 (36 ms)
+2026-08-06T14:40:12.240+08:00  INFO 46768 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-4] i.i.mvc.logging.RequestLoggingFilter     : HTTP GET /.well-known/appspecific/com.chrome.devtools.json -> 404 (13 ms)
+2026-08-06T14:40:35.929+08:00  INFO 46768 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-5] i.i.mvc.logging.RequestLoggingFilter     : HTTP GET /example/time?value=2026-10-10 -> 200 (14 ms)
+2026-08-06T14:40:35.994+08:00  INFO 46768 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-6] i.i.mvc.logging.RequestLoggingFilter     : HTTP GET /.well-known/appspecific/com.chrome.devtools.json -> 404 (25 ms)
+2026-08-06T14:40:42.372+08:00  INFO 46768 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-7] i.i.mvc.logging.RequestLoggingFilter     : HTTP GET /example/time?value=2026-10-10%2025 -> 400 (5 ms)
+2026-08-06T14:40:42.415+08:00  INFO 46768 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-8] i.i.mvc.logging.RequestLoggingFilter     : HTTP GET /.well-known/appspecific/com.chrome.devtools.json -> 404 (1 ms)
+2026-08-06T14:40:49.339+08:00  INFO 46768 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-9] i.i.mvc.logging.RequestLoggingFilter     : HTTP GET /example/time?value=2026-10-10%2025:20:20 -> 400 (1 ms)
+2026-08-06T14:40:49.389+08:00  INFO 46768 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-10] i.i.mvc.logging.RequestLoggingFilter     : HTTP GET /.well-known/appspecific/com.chrome.devtools.json -> 404 (3 ms)
+2026-08-06T14:41:07.091+08:00  INFO 46768 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-1] i.i.mvc.logging.RequestLoggingFilter     : HTTP GET /example/time?value=2026-10-10%2010:10:10 -> 200 (1 ms)
+2026-08-06T14:41:07.142+08:00  INFO 46768 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-2] i.i.mvc.logging.RequestLoggingFilter     : HTTP GET /.well-known/appspecific/com.chrome.devtools.json -> 404 (3 ms)
+2026-08-06T14:41:20.175+08:00  INFO 46768 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-3] i.i.mvc.logging.RequestLoggingFilter     : HTTP GET /example/void -> 200 (11 ms)
+2026-08-06T14:41:20.211+08:00  INFO 46768 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-4] i.i.mvc.logging.RequestLoggingFilter     : HTTP GET /.well-known/appspecific/com.chrome.devtools.json -> 404 (5 ms)
+2026-08-06T14:41:30.535+08:00  INFO 46768 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-5] i.i.mvc.logging.RequestLoggingFilter     : HTTP GET /example/missing -> 404 (9 ms)
+2026-08-06T14:41:30.577+08:00  INFO 46768 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-6] i.i.mvc.logging.RequestLoggingFilter     : HTTP GET /.well-known/appspecific/com.chrome.devtools.json -> 404 (4 ms)
+2026-08-06T14:41:36.224+08:00  INFO 46768 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-7] i.i.mvc.logging.RequestLoggingFilter     : HTTP GET /example/missing -> 404 (1 ms)
+2026-08-06T14:41:36.266+08:00  INFO 46768 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-8] i.i.mvc.logging.RequestLoggingFilter     : HTTP GET /.well-known/appspecific/com.chrome.devtools.json -> 404 (5 ms)
+2026-08-06T14:41:53.371+08:00  INFO 46768 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-9] i.i.mvc.logging.RequestLoggingFilter     : HTTP GET /example/validate?value=1 -> 200 (32 ms)
+2026-08-06T14:41:53.408+08:00  INFO 46768 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-10] i.i.mvc.logging.RequestLoggingFilter     : HTTP GET /.well-known/appspecific/com.chrome.devtools.json -> 404 (4 ms)
+2026-08-06T14:41:56.572+08:00  INFO 46768 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-1] i.i.mvc.logging.RequestLoggingFilter     : HTTP GET /example/validate?value=2 -> 200 (1 ms)
+2026-08-06T14:41:56.606+08:00  INFO 46768 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-2] i.i.mvc.logging.RequestLoggingFilter     : HTTP GET /.well-known/appspecific/com.chrome.devtools.json -> 404 (2 ms)
+2026-08-06T14:41:59.527+08:00  INFO 46768 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-3] i.i.mvc.logging.RequestLoggingFilter     : HTTP GET /example/validate?value=0 -> 400 (14 ms)
+2026-08-06T14:41:59.554+08:00  INFO 46768 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-4] i.i.mvc.logging.RequestLoggingFilter     : HTTP GET /.well-known/appspecific/com.chrome.devtools.json -> 404 (1 ms)
+2026-08-06T14:45:16.972+08:00  INFO 46768 --- [spring-boot-starter-smart-mvc-example] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-06T14:45:16.982+08:00  INFO 46768 --- [spring-boot-starter-smart-mvc-example] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-08-06T14:45:33.281+08:00  INFO 47343 --- [spring-boot-starter-smart-mvc-example] [main] .i.m.SmartMvcSpringBootStarterExampleApp : Starting SmartMvcSpringBootStarterExampleApp using Java 25 with PID 47343 (/Users/xiatian/projects/GitHub/smart-mvc/spring-boot-starter-smart-mvc-example/target/classes started by xiatian in /Users/xiatian/projects/GitHub/smart-mvc)
+2026-08-06T14:45:33.282+08:00  INFO 47343 --- [spring-boot-starter-smart-mvc-example] [main] .i.m.SmartMvcSpringBootStarterExampleApp : No active profile set, falling back to 1 default profile: "default"
+2026-08-06T14:45:33.589+08:00  INFO 47343 --- [spring-boot-starter-smart-mvc-example] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-08-06T14:45:33.595+08:00  INFO 47343 --- [spring-boot-starter-smart-mvc-example] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-06T14:45:33.595+08:00  INFO 47343 --- [spring-boot-starter-smart-mvc-example] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-08-06T14:45:33.609+08:00  INFO 47343 --- [spring-boot-starter-smart-mvc-example] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-08-06T14:45:33.609+08:00  INFO 47343 --- [spring-boot-starter-smart-mvc-example] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 313 ms
+2026-08-06T14:45:33.761+08:00  INFO 47343 --- [spring-boot-starter-smart-mvc-example] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2026-08-06T14:45:33.766+08:00  INFO 47343 --- [spring-boot-starter-smart-mvc-example] [main] .i.m.SmartMvcSpringBootStarterExampleApp : Started SmartMvcSpringBootStarterExampleApp in 0.649 seconds (process running for 2.373)
+2026-08-06T14:48:17.011+08:00  INFO 47343 --- [spring-boot-starter-smart-mvc-example] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-06T14:48:17.022+08:00  INFO 47343 --- [spring-boot-starter-smart-mvc-example] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-08-06T14:48:18.565+08:00  INFO 47585 --- [spring-boot-starter-smart-mvc-example] [main] .i.m.SmartMvcSpringBootStarterExampleApp : Starting SmartMvcSpringBootStarterExampleApp using Java 25 with PID 47585 (/Users/xiatian/projects/GitHub/smart-mvc/spring-boot-starter-smart-mvc-example/target/classes started by xiatian in /Users/xiatian/projects/GitHub/smart-mvc)
+2026-08-06T14:48:18.566+08:00  INFO 47585 --- [spring-boot-starter-smart-mvc-example] [main] .i.m.SmartMvcSpringBootStarterExampleApp : No active profile set, falling back to 1 default profile: "default"
+2026-08-06T14:48:18.902+08:00  INFO 47585 --- [spring-boot-starter-smart-mvc-example] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-08-06T14:48:18.909+08:00  INFO 47585 --- [spring-boot-starter-smart-mvc-example] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-06T14:48:18.909+08:00  INFO 47585 --- [spring-boot-starter-smart-mvc-example] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-08-06T14:48:18.924+08:00  INFO 47585 --- [spring-boot-starter-smart-mvc-example] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-08-06T14:48:18.924+08:00  INFO 47585 --- [spring-boot-starter-smart-mvc-example] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 342 ms
+2026-08-06T14:48:19.077+08:00  INFO 47585 --- [spring-boot-starter-smart-mvc-example] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2026-08-06T14:48:19.081+08:00  INFO 47585 --- [spring-boot-starter-smart-mvc-example] [main] .i.m.SmartMvcSpringBootStarterExampleApp : Started SmartMvcSpringBootStarterExampleApp in 0.724 seconds (process running for 1.396)
+2026-08-06T14:48:22.686+08:00  INFO 47585 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-06T14:48:22.687+08:00  INFO 47585 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-06T14:48:22.687+08:00  INFO 47585 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-08-06T14:48:22.752+08:00  INFO 47585 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-1] i.i.mvc.logging.RequestLoggingFilter     : HTTP GET /example/validate?value=0 -> 400 (63 ms)
+2026-08-06T14:48:22.837+08:00  INFO 47585 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-2] i.i.mvc.logging.RequestLoggingFilter     : HTTP GET /.well-known/appspecific/com.chrome.devtools.json -> 404 (24 ms)
+2026-08-06T14:48:32.514+08:00 ERROR 47585 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-3] i.i.mvc.advice.SmartMvcExceptionHandler  : Unhandled MVC exception:null
+
+java.lang.NullPointerException: null
+	at java.base/java.util.Objects.requireNonNull(Objects.java:220) ~[na:na]
+	at java.base/java.util.ImmutableCollections$MapN.<init>(ImmutableCollections.java:1437) ~[na:na]
+	at java.base/java.util.Map.of(Map.java:1456) ~[na:na]
+	at ink.icoding.mvc.SmartMvcExampleController.loginValidate(SmartMvcExampleController.java:60) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.12.jar:6.2.12]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.48.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.48.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.12.jar:6.2.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.12.jar:6.2.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.12.jar:6.2.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.12.jar:6.2.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at ink.icoding.mvc.logging.RequestLoggingFilter.doFilterInternal(RequestLoggingFilter.java:27) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.12.jar:6.2.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.12.jar:6.2.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.12.jar:6.2.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1774) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at java.base/java.lang.Thread.run(Thread.java:1474) ~[na:na]
+
+2026-08-06T14:48:32.517+08:00  INFO 47585 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-3] i.i.mvc.logging.RequestLoggingFilter     : HTTP GET /example/login-validate -> 500 (7 ms)
+2026-08-06T14:48:32.560+08:00  INFO 47585 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-4] i.i.mvc.logging.RequestLoggingFilter     : HTTP GET /.well-known/appspecific/com.chrome.devtools.json -> 404 (5 ms)
+2026-08-06T14:49:23.384+08:00 ERROR 47585 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-5] i.i.mvc.advice.SmartMvcExceptionHandler  : Unhandled MVC exception:null
+
+java.lang.NullPointerException: null
+	at java.base/java.util.Objects.requireNonNull(Objects.java:220) ~[na:na]
+	at java.base/java.util.ImmutableCollections$MapN.<init>(ImmutableCollections.java:1437) ~[na:na]
+	at java.base/java.util.Map.of(Map.java:1456) ~[na:na]
+	at ink.icoding.mvc.SmartMvcExampleController.loginValidate(SmartMvcExampleController.java:60) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.12.jar:6.2.12]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.48.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.12.jar:6.2.12]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.48.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.12.jar:6.2.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.12.jar:6.2.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.12.jar:6.2.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.12.jar:6.2.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at ink.icoding.mvc.logging.RequestLoggingFilter.doFilterInternal(RequestLoggingFilter.java:27) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.12.jar:6.2.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.12.jar:6.2.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.12.jar:6.2.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1774) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at java.base/java.lang.Thread.run(Thread.java:1474) ~[na:na]
+
+2026-08-06T14:49:23.389+08:00  INFO 47585 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-5] i.i.mvc.logging.RequestLoggingFilter     : HTTP GET /example/login-validate -> 500 (39674 ms)
+2026-08-06T14:49:23.559+08:00  INFO 47585 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-6] i.i.mvc.logging.RequestLoggingFilter     : HTTP GET /.well-known/appspecific/com.chrome.devtools.json -> 404 (9 ms)
+2026-08-06T14:49:35.866+08:00  INFO 47585 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-7] i.i.mvc.logging.RequestLoggingFilter     : HTTP GET /example/login-validate -> 200 (26 ms)
+2026-08-06T14:49:35.924+08:00  INFO 47585 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-8] i.i.mvc.logging.RequestLoggingFilter     : HTTP GET /.well-known/appspecific/com.chrome.devtools.json -> 404 (6 ms)
+2026-08-06T14:50:20.998+08:00  INFO 47585 --- [spring-boot-starter-smart-mvc-example] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-06T14:50:21.007+08:00  INFO 47585 --- [spring-boot-starter-smart-mvc-example] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-08-06T14:50:23.012+08:00  INFO 47645 --- [spring-boot-starter-smart-mvc-example] [main] .i.m.SmartMvcSpringBootStarterExampleApp : Starting SmartMvcSpringBootStarterExampleApp using Java 25 with PID 47645 (/Users/xiatian/projects/GitHub/smart-mvc/spring-boot-starter-smart-mvc-example/target/classes started by xiatian in /Users/xiatian/projects/GitHub/smart-mvc)
+2026-08-06T14:50:23.013+08:00  INFO 47645 --- [spring-boot-starter-smart-mvc-example] [main] .i.m.SmartMvcSpringBootStarterExampleApp : No active profile set, falling back to 1 default profile: "default"
+2026-08-06T14:50:23.343+08:00  INFO 47645 --- [spring-boot-starter-smart-mvc-example] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-08-06T14:50:23.349+08:00  INFO 47645 --- [spring-boot-starter-smart-mvc-example] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-06T14:50:23.349+08:00  INFO 47645 --- [spring-boot-starter-smart-mvc-example] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-08-06T14:50:23.365+08:00  INFO 47645 --- [spring-boot-starter-smart-mvc-example] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-08-06T14:50:23.365+08:00  INFO 47645 --- [spring-boot-starter-smart-mvc-example] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 332 ms
+2026-08-06T14:50:23.523+08:00  INFO 47645 --- [spring-boot-starter-smart-mvc-example] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2026-08-06T14:50:23.528+08:00  INFO 47645 --- [spring-boot-starter-smart-mvc-example] [main] .i.m.SmartMvcSpringBootStarterExampleApp : Started SmartMvcSpringBootStarterExampleApp in 0.718 seconds (process running for 1.292)
+2026-08-06T14:50:29.321+08:00  INFO 47645 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-06T14:50:29.321+08:00  INFO 47645 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-06T14:50:29.322+08:00  INFO 47645 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-08-06T14:50:29.363+08:00  INFO 47645 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-1] i.i.mvc.logging.RequestLoggingFilter     : HTTP GET /example/login-validate -> 200 (39 ms)
+2026-08-06T14:50:29.431+08:00  INFO 47645 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-2] i.i.mvc.logging.RequestLoggingFilter     : HTTP GET /.well-known/appspecific/com.chrome.devtools.json -> 404 (29 ms)
+2026-08-06T15:33:53.903+08:00  INFO 47645 --- [spring-boot-starter-smart-mvc-example] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-06T15:33:53.932+08:00  INFO 47645 --- [spring-boot-starter-smart-mvc-example] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-08-06T15:33:58.890+08:00  INFO 50036 --- [spring-boot-starter-smart-mvc-example] [main] .i.m.SmartMvcSpringBootStarterExampleApp : Starting SmartMvcSpringBootStarterExampleApp using Java 25 with PID 50036 (/Users/xiatian/projects/GitHub/smart-mvc/spring-boot-starter-smart-mvc-example/target/classes started by xiatian in /Users/xiatian/projects/GitHub/smart-mvc)
+2026-08-06T15:33:58.897+08:00  INFO 50036 --- [spring-boot-starter-smart-mvc-example] [main] .i.m.SmartMvcSpringBootStarterExampleApp : No active profile set, falling back to 1 default profile: "default"
+2026-08-06T15:33:59.427+08:00  INFO 50036 --- [spring-boot-starter-smart-mvc-example] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-08-06T15:33:59.435+08:00  INFO 50036 --- [spring-boot-starter-smart-mvc-example] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-06T15:33:59.435+08:00  INFO 50036 --- [spring-boot-starter-smart-mvc-example] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-08-06T15:33:59.453+08:00  INFO 50036 --- [spring-boot-starter-smart-mvc-example] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-08-06T15:33:59.453+08:00  INFO 50036 --- [spring-boot-starter-smart-mvc-example] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 489 ms
+2026-08-06T15:33:59.653+08:00  INFO 50036 --- [spring-boot-starter-smart-mvc-example] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2026-08-06T15:33:59.659+08:00  INFO 50036 --- [spring-boot-starter-smart-mvc-example] [main] .i.m.SmartMvcSpringBootStarterExampleApp : Started SmartMvcSpringBootStarterExampleApp in 1.311 seconds (process running for 2.634)
+2026-08-06T15:34:13.398+08:00  INFO 50036 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-06T15:34:13.398+08:00  INFO 50036 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-06T15:34:13.399+08:00  INFO 50036 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-08-06T15:34:13.447+08:00  INFO 50036 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-1] i.icoding.mvc.SmartMvcExampleController  : HTTP GET /example/login-validate -> 200 (46 ms)
+2026-08-06T15:34:13.564+08:00  INFO 50036 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-2] o.s.w.s.r.ResourceHttpRequestHandler     : HTTP GET /.well-known/appspecific/com.chrome.devtools.json -> 404 (50 ms)
+2026-08-06T15:45:22.936+08:00  INFO 50036 --- [spring-boot-starter-smart-mvc-example] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-06T15:45:22.947+08:00  INFO 50036 --- [spring-boot-starter-smart-mvc-example] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-08-06T15:45:26.665+08:00  INFO 50952 --- [spring-boot-starter-smart-mvc-example] [main] .i.m.SmartMvcSpringBootStarterExampleApp : Starting SmartMvcSpringBootStarterExampleApp using Java 25 with PID 50952 (/Users/xiatian/projects/GitHub/smart-mvc/spring-boot-starter-smart-mvc-example/target/classes started by xiatian in /Users/xiatian/projects/GitHub/smart-mvc)
+2026-08-06T15:45:26.666+08:00  INFO 50952 --- [spring-boot-starter-smart-mvc-example] [main] .i.m.SmartMvcSpringBootStarterExampleApp : No active profile set, falling back to 1 default profile: "default"
+2026-08-06T15:45:27.001+08:00  INFO 50952 --- [spring-boot-starter-smart-mvc-example] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-08-06T15:45:27.007+08:00  INFO 50952 --- [spring-boot-starter-smart-mvc-example] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-06T15:45:27.008+08:00  INFO 50952 --- [spring-boot-starter-smart-mvc-example] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-08-06T15:45:27.022+08:00  INFO 50952 --- [spring-boot-starter-smart-mvc-example] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-08-06T15:45:27.022+08:00  INFO 50952 --- [spring-boot-starter-smart-mvc-example] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 339 ms
+2026-08-06T15:45:27.183+08:00  INFO 50952 --- [spring-boot-starter-smart-mvc-example] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2026-08-06T15:45:27.187+08:00  INFO 50952 --- [spring-boot-starter-smart-mvc-example] [main] .i.m.SmartMvcSpringBootStarterExampleApp : Started SmartMvcSpringBootStarterExampleApp in 0.741 seconds (process running for 1.988)
+2026-08-06T15:53:36.138+08:00  INFO 50952 --- [spring-boot-starter-smart-mvc-example] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-06T15:53:36.156+08:00  INFO 50952 --- [spring-boot-starter-smart-mvc-example] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-08-06T15:53:39.987+08:00  INFO 51981 --- [spring-boot-starter-smart-mvc-example] [main] .i.m.SmartMvcSpringBootStarterExampleApp : Starting SmartMvcSpringBootStarterExampleApp using Java 25 with PID 51981 (/Users/xiatian/projects/GitHub/smart-mvc/spring-boot-starter-smart-mvc-example/target/classes started by xiatian in /Users/xiatian/projects/GitHub/smart-mvc)
+2026-08-06T15:53:39.988+08:00  INFO 51981 --- [spring-boot-starter-smart-mvc-example] [main] .i.m.SmartMvcSpringBootStarterExampleApp : No active profile set, falling back to 1 default profile: "default"
+2026-08-06T15:53:40.404+08:00  INFO 51981 --- [spring-boot-starter-smart-mvc-example] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-08-06T15:53:40.411+08:00  INFO 51981 --- [spring-boot-starter-smart-mvc-example] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-06T15:53:40.411+08:00  INFO 51981 --- [spring-boot-starter-smart-mvc-example] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-08-06T15:53:40.427+08:00  INFO 51981 --- [spring-boot-starter-smart-mvc-example] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-08-06T15:53:40.427+08:00  INFO 51981 --- [spring-boot-starter-smart-mvc-example] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 414 ms
+2026-08-06T15:53:40.613+08:00  INFO 51981 --- [spring-boot-starter-smart-mvc-example] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2026-08-06T15:53:40.621+08:00  INFO 51981 --- [spring-boot-starter-smart-mvc-example] [main] .i.m.SmartMvcSpringBootStarterExampleApp : Started SmartMvcSpringBootStarterExampleApp in 0.892 seconds (process running for 2.532)
+2026-08-06T15:55:13.649+08:00  INFO 51981 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-06T15:55:13.650+08:00  INFO 51981 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-06T15:55:13.660+08:00  INFO 51981 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2026-08-06T15:55:13.920+08:00  INFO 51981 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-1] i.i.mvc.auth.ExampleAuthController       : HTTP POST /auth/login -> 401 (253 ms)
+2026-08-06T15:55:23.262+08:00  INFO 51981 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-2] i.i.mvc.auth.ExampleAuthController       : HTTP POST /auth/login -> 400 (12 ms)
+2026-08-06T15:55:48.207+08:00  INFO 51981 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-3] i.i.mvc.auth.ExampleAuthController       : HTTP POST /auth/login -> 401 (6 ms)
+2026-08-06T15:56:13.370+08:00  INFO 51981 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-5] i.i.mvc.auth.ExampleAuthController       : HTTP POST /auth/login -> 200 (9 ms)
+2026-08-06T15:56:37.797+08:00  INFO 51981 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-4] i.i.mvc.auth.ExampleAuthController       : HTTP POST /auth/login -> 200 (4 ms)
+2026-08-06T15:57:11.036+08:00  INFO 51981 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-6] i.i.mvc.auth.ExampleAuthController       : HTTP GET /auth/public -> 200 (9 ms)
+2026-08-06T15:57:32.283+08:00  INFO 51981 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-7] i.i.mvc.auth.ExampleAuthController       : HTTP GET /auth/me -> 401 (7 ms)
+2026-08-06T15:58:07.873+08:00  INFO 51981 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-8] i.i.mvc.auth.ExampleAuthController       : HTTP GET /auth/me -> 200 (12 ms)
+2026-08-06T15:59:27.482+08:00  INFO 51981 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-10] i.i.mvc.auth.ExampleAuthController       : HTTP GET /auth/admin -> 403 (4 ms)
+2026-08-06T15:59:34.950+08:00  INFO 51981 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-1] i.i.mvc.auth.ExampleAuthController       : HTTP GET /auth/admin -> 403 (1 ms)
+2026-08-06T15:59:59.387+08:00  INFO 51981 --- [spring-boot-starter-smart-mvc-example] [http-nio-8081-exec-2] i.i.mvc.auth.ExampleAuthController       : HTTP GET /auth/admin -> 200 (4 ms)

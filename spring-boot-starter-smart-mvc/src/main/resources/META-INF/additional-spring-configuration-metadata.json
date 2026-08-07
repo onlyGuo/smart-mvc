@@ -1,0 +1,230 @@
+{
+  "groups": [
+    {
+      "name": "spring.smart.mvc",
+      "type": "ink.icoding.mvc.autoconfigure.SmartMvcProperties",
+      "description": "SmartMVC 的 Spring Boot 集成配置。"
+    },
+    {
+      "name": "spring.smart.mvc.auth",
+      "type": "ink.icoding.mvc.entitys.AuthConfig",
+      "description": "认证拦截器配置。"
+    },
+    {
+      "name": "spring.smart.mvc.date-time",
+      "type": "ink.icoding.mvc.entitys.DateTimeConfig",
+      "description": "请求和响应的日期时间格式配置。"
+    },
+    {
+      "name": "spring.smart.mvc.exception",
+      "type": "ink.icoding.mvc.entitys.ExceptionConfig",
+      "description": "全局异常处理配置。"
+    },
+    {
+      "name": "spring.smart.mvc.request-log",
+      "type": "ink.icoding.mvc.entitys.RequestLogConfig",
+      "description": "HTTP 请求摘要日志配置。"
+    },
+    {
+      "name": "spring.smart.mvc.response",
+      "type": "ink.icoding.mvc.entitys.ResponseConfig",
+      "description": "统一响应体和 JSON 数值序列化配置。"
+    },
+    {
+      "name": "spring.smart.mvc.validation",
+      "type": "ink.icoding.mvc.entitys.ValidationConfig",
+      "description": "Spring MVC 请求参数校验配置。"
+    }
+  ],
+  "properties": [
+    {
+      "name": "spring.smart.mvc.auth.authorization-header",
+      "type": "java.lang.String",
+      "description": "读取身份凭据的 HTTP 请求头名称。",
+      "defaultValue": "Authorization"
+    },
+    {
+      "name": "spring.smart.mvc.auth.enabled",
+      "type": "java.lang.Boolean",
+      "description": "是否启用 SmartMVC 认证拦截。",
+      "defaultValue": true
+    },
+    {
+      "name": "spring.smart.mvc.auth.mode",
+      "type": "ink.icoding.mvc.auth.AuthenticationMode",
+      "description": "认证范围：全局认证，或只认证带有 @Auth 的接口。",
+      "defaultValue": "ANNOTATED"
+    },
+    {
+      "name": "spring.smart.mvc.auth.check-request-permission",
+      "type": "java.lang.Boolean",
+      "description": "是否用当前用户的 METHOD:PATH 权限表达式校验每次认证请求。",
+      "defaultValue": false
+    },
+    {
+      "name": "spring.smart.mvc.auth.exclude-paths",
+      "type": "java.lang.String[]",
+      "description": "不经过认证拦截器的 Spring MVC 路径模式。",
+      "defaultValue": []
+    },
+    {
+      "name": "spring.smart.mvc.auth.token-prefix",
+      "type": "java.lang.String",
+      "description": "从认证请求头中移除的 Token 前缀。",
+      "defaultValue": "Bearer"
+    },
+    {
+      "name": "spring.smart.mvc.date-time.date-request-format",
+      "type": "java.lang.String",
+      "description": "LocalDate 请求参数和 JSON 输入格式。",
+      "defaultValue": "yyyy-MM-dd"
+    },
+    {
+      "name": "spring.smart.mvc.date-time.date-response-format",
+      "type": "java.lang.String",
+      "description": "LocalDate JSON 响应格式。",
+      "defaultValue": "yyyy-MM-dd"
+    },
+    {
+      "name": "spring.smart.mvc.date-time.incomplete-input-policy",
+      "type": "ink.icoding.mvc.entitys.IncompleteDateTimePolicy",
+      "description": "日期时间输入缺少时间部分时的处理策略。",
+      "defaultValue": "FILL_MISSING"
+    },
+    {
+      "name": "spring.smart.mvc.date-time.request-format",
+      "type": "java.lang.String",
+      "description": "LocalDateTime、Instant、OffsetDateTime、ZonedDateTime 和 Date 的本地日期时间输入格式。",
+      "defaultValue": "yyyy-MM-dd HH:mm:ss"
+    },
+    {
+      "name": "spring.smart.mvc.date-time.response-format",
+      "type": "java.lang.String",
+      "description": "LocalDateTime、Instant、OffsetDateTime、ZonedDateTime 和 Date 的 JSON 响应格式。",
+      "defaultValue": "yyyy-MM-dd HH:mm:ss"
+    },
+    {
+      "name": "spring.smart.mvc.date-time.time-request-format",
+      "type": "java.lang.String",
+      "description": "LocalTime 请求参数和 JSON 输入格式。",
+      "defaultValue": "HH:mm:ss"
+    },
+    {
+      "name": "spring.smart.mvc.date-time.time-response-format",
+      "type": "java.lang.String",
+      "description": "LocalTime JSON 响应格式。",
+      "defaultValue": "HH:mm:ss"
+    },
+    {
+      "name": "spring.smart.mvc.date-time.zone-id",
+      "type": "java.lang.String",
+      "description": "Instant、OffsetDateTime、ZonedDateTime 和 Date 转换使用的 IANA 时区；system-default 表示 JVM 默认时区。",
+      "defaultValue": "system-default"
+    },
+    {
+      "name": "spring.smart.mvc.exception.enabled",
+      "type": "java.lang.Boolean",
+      "description": "是否启用 SmartMVC 全局异常处理。",
+      "defaultValue": true
+    },
+    {
+      "name": "spring.smart.mvc.exception.status-mode",
+      "type": "ink.icoding.mvc.entitys.ExceptionStatusMode",
+      "description": "异常响应使用真实 HTTP 状态码还是统一返回 HTTP 200。",
+      "defaultValue": "HTTP_STATUS"
+    },
+    {
+      "name": "spring.smart.mvc.request-log.enabled",
+      "type": "java.lang.Boolean",
+      "description": "是否记录请求方法、URL、响应状态码和耗时。",
+      "defaultValue": true
+    },
+    {
+      "name": "spring.smart.mvc.request-log.level",
+      "type": "ink.icoding.mvc.entitys.RequestLogLevel",
+      "description": "Controller 请求摘要使用的日志输出级别。",
+      "defaultValue": "INFO"
+    },
+    {
+      "name": "spring.smart.mvc.response.long-as-string",
+      "type": "java.lang.Boolean",
+      "description": "是否将 Long 和 long 类型的 JSON 响应值序列化为字符串。",
+      "defaultValue": true
+    },
+    {
+      "name": "spring.smart.mvc.response.success-message",
+      "type": "java.lang.String",
+      "description": "统一成功响应的默认 message 文案。",
+      "defaultValue": "success"
+    },
+    {
+      "name": "spring.smart.mvc.response.wrap-enabled",
+      "type": "java.lang.Boolean",
+      "description": "是否将普通 Controller 返回值包装为统一响应体。",
+      "defaultValue": true
+    },
+    {
+      "name": "spring.smart.mvc.response.wrap-void",
+      "type": "java.lang.Boolean",
+      "description": "是否将 void Controller 返回值包装为成功的空响应体。",
+      "defaultValue": true
+    },
+    {
+      "name": "spring.smart.mvc.validation.enabled",
+      "type": "java.lang.Boolean",
+      "description": "是否启用 Spring MVC 请求参数校验。",
+      "defaultValue": true
+    }
+  ],
+  "hints": [
+    {
+      "name": "spring.smart.mvc.request-log.level",
+      "values": [
+        { "value": "TRACE", "description": "使用 TRACE 级别输出请求摘要。" },
+        { "value": "DEBUG", "description": "使用 DEBUG 级别输出请求摘要。" },
+        { "value": "INFO", "description": "使用 INFO 级别输出请求摘要。" },
+        { "value": "WARN", "description": "使用 WARN 级别输出请求摘要。" },
+        { "value": "ERROR", "description": "使用 ERROR 级别输出请求摘要。" }
+      ]
+    },
+    {
+      "name": "spring.smart.mvc.auth.mode",
+      "values": [
+        {
+          "value": "GLOBAL",
+          "description": "认证所有接口，但排除 exclude-paths 和带有 @Anonymous 的接口。"
+        },
+        {
+          "value": "ANNOTATED",
+          "description": "只认证带有 @Auth 的接口，@Anonymous 接口始终放行。"
+        }
+      ]
+    },
+    {
+      "name": "spring.smart.mvc.exception.status-mode",
+      "values": [
+        {
+          "value": "HTTP_STATUS",
+          "description": "响应使用异常对应的真实 HTTP 状态码。"
+        },
+        {
+          "value": "ALWAYS_OK",
+          "description": "异常响应的 HTTP 状态码统一为 200，错误信息保留在响应体中。"
+        }
+      ]
+    },
+    {
+      "name": "spring.smart.mvc.date-time.incomplete-input-policy",
+      "values": [
+        {
+          "value": "FILL_MISSING",
+          "description": "自动补全年、月或日期输入缺少的部分，并将缺失时间补为 00:00:00。"
+        },
+        {
+          "value": "REJECT",
+          "description": "拒绝不符合 request-format 完整格式的输入。"
+        }
+      ]
+    }
+  ]
+}
