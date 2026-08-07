@@ -15,16 +15,16 @@
 <p align="center">
   <img alt="Java 17+" src="https://img.shields.io/badge/Java-17%2B-ED8B00?style=flat-square&amp;logo=openjdk&amp;logoColor=white">
   <img alt="Spring Boot 3.5.7" src="https://img.shields.io/badge/Spring_Boot-3.5.7-6DB33F?style=flat-square&amp;logo=springboot&amp;logoColor=white">
-  <a href="https://github.com/onlyGuo/smart-mvc/actions/workflows/deploy-docs.yml"><img alt="Documentation deployment" src="https://github.com/onlyGuo/smart-mvc/actions/workflows/deploy-docs.yml/badge.svg"></a>
-  <a href="./LICENSE"><img alt="Apache License 2.0" src="https://img.shields.io/badge/License-Apache_2.0-blue.svg?style=flat-square"></a>
+  <a href="https://onlyguo.github.io/smart-mvc/en/"><img alt="Documentation deployment" src="https://github.com/onlyGuo/smart-mvc/actions/workflows/deploy-docs.yml/badge.svg"></a>
+  <img alt="Apache License 2.0" src="https://img.shields.io/badge/License-Apache_2.0-blue.svg?style=flat-square">
 </p>
 
 <p align="center">
-  <a href="./docs/en/contents.md">Documentation</a> ·
-  <a href="./docs/en/guide/getting-started.md">Quick start</a> ·
-  <a href="./docs/en/auth/overview.md">Authentication</a> ·
-  <a href="./docs/en/reference/configuration.md">Configuration</a> ·
-  <a href="./spring-boot-starter-smart-mvc-example">Example</a>
+  <a href="https://onlyguo.github.io/smart-mvc/en/contents.html">Documentation</a> ·
+  <a href="https://onlyguo.github.io/smart-mvc/en/guide/getting-started.html">Quick start</a> ·
+  <a href="https://onlyguo.github.io/smart-mvc/en/auth/overview.html">Authentication</a> ·
+  <a href="https://onlyguo.github.io/smart-mvc/en/reference/configuration.html">Configuration</a> ·
+  <a href="https://onlyguo.github.io/smart-mvc/en/examples/login.html">Example</a>
 </p>
 
 ---
@@ -66,10 +66,10 @@ This keeps the framework useful without making the application feel like framewo
 
 | Module | Maven coordinates | Responsibility |
 | --- | --- | --- |
-| [`core`](./core) | `ink.icoding.mvc:core:1.0.0` | Spring-independent annotations, response and configuration models, authentication concepts, permission matching, and exception types |
-| [`spring-boot-starter-smart-mvc`](./spring-boot-starter-smart-mvc) | `ink.icoding:spring-boot-starter-smart-mvc:1.0.0` | Auto-configuration, MVC advice, Jackson integration, request logging, validation integration, and authentication interception |
-| [`spring-boot-starter-smart-mvc-example`](./spring-boot-starter-smart-mvc-example) | `ink.icoding:spring-boot-starter-smart-mvc-example:1.0.0` | A database-free application demonstrating responses, validation, temporal handling, exceptions, and in-memory authentication |
-| [`docs`](./docs) | — | VuePress documentation in Chinese, English, Japanese, and Russian |
+| [`core`](https://onlyguo.github.io/smart-mvc/en/guide/introduction.html) | `ink.icoding.mvc:core:1.0.0` | Spring-independent annotations, response and configuration models, authentication concepts, permission matching, and exception types |
+| [`spring-boot-starter-smart-mvc`](https://onlyguo.github.io/smart-mvc/en/guide/introduction.html) | `ink.icoding:spring-boot-starter-smart-mvc:1.0.0` | Auto-configuration, MVC advice, Jackson integration, request logging, validation integration, and authentication interception |
+| [`spring-boot-starter-smart-mvc-example`](https://onlyguo.github.io/smart-mvc/en/examples/login.html) | `ink.icoding:spring-boot-starter-smart-mvc-example:1.0.0` | A database-free application demonstrating responses, validation, temporal handling, exceptions, and in-memory authentication |
+| [`docs`](https://onlyguo.github.io/smart-mvc/en/contents.html) | — | VuePress documentation in Chinese, English, Japanese, and Russian |
 
 The split is deliberate: shared contracts remain in the Spring-free Core, while Spring-specific behavior stays in the Starter.
 
@@ -191,7 +191,7 @@ spring:
         mode: ANNOTATED
 ```
 
-The Starter includes Spring Boot configuration metadata, so supported properties, defaults, descriptions, and enum values appear in IDE completion. See the [complete configuration reference](./docs/en/reference/configuration.md) for every option.
+The Starter includes Spring Boot configuration metadata, so supported properties, defaults, descriptions, and enum values appear in IDE completion. See the [complete configuration reference](https://onlyguo.github.io/smart-mvc/en/reference/configuration.html) for every option.
 
 ## Authentication and the current user
 
@@ -256,7 +256,7 @@ public class ProfileService {
 > [!WARNING]
 > Without a custom `AuthInterceptor`, the default implementation permits requests so a new project can start immediately. Applications that require real authentication must provide their own implementation. The request context is not automatically propagated to `@Async` methods, manually created threads, reactive pipelines, or Spring MVC asynchronous callbacks.
 
-Read [authentication and authorization](./docs/en/auth/overview.md) and [custom authentication](./docs/en/auth/custom-authentication.md) for the full lifecycle and extension points.
+Read [authentication and authorization](https://onlyguo.github.io/smart-mvc/en/auth/overview.html) and [custom authentication](https://onlyguo.github.io/smart-mvc/en/auth/custom-authentication.html) for the full lifecycle and extension points.
 
 ## Run the Example
 
@@ -291,7 +291,7 @@ curl http://localhost:8080/auth/me \
   -H 'Authorization: Bearer example-admin-token'
 ```
 
-The fixed users, plain-text passwords, and tokens exist only for local learning and automated tests. See the [complete authentication example](./docs/en/examples/login.md) for the administrator and rejection flows.
+The fixed users, plain-text passwords, and tokens exist only for local learning and automated tests. See the [complete authentication example](https://onlyguo.github.io/smart-mvc/en/examples/login.html) for the administrator and rejection flows.
 
 ## Documentation
 
@@ -299,20 +299,20 @@ The guides move from first principles to detailed references:
 
 | Language | Documentation |
 | --- | --- |
-| English | [Read the English documentation](./docs/en/contents.md) |
-| 简体中文 | [阅读中文文档](./docs/contents.md) |
-| 日本語 | [日本語ドキュメントを読む](./docs/ja/contents.md) |
-| Русский | [Читать документацию](./docs/ru/contents.md) |
+| English | [Read the English documentation](https://onlyguo.github.io/smart-mvc/en/contents.html) |
+| 简体中文 | [阅读中文文档](https://onlyguo.github.io/smart-mvc/contents.html) |
+| 日本語 | [日本語ドキュメントを読む](https://onlyguo.github.io/smart-mvc/ja/contents.html) |
+| Русский | [Читать документацию](https://onlyguo.github.io/smart-mvc/ru/contents.html) |
 
 Useful English entry points:
 
-- [What is SmartMVC?](./docs/en/guide/introduction.md)
-- [Quick start](./docs/en/guide/getting-started.md)
-- [How a request moves through SmartMVC](./docs/en/guide/how-it-works.md)
-- [Core features](./docs/en/features/response.md)
-- [Authentication and authorization](./docs/en/auth/overview.md)
-- [Configuration reference](./docs/en/reference/configuration.md)
-- [API reference](./docs/en/reference/api.md)
+- [What is SmartMVC?](https://onlyguo.github.io/smart-mvc/en/guide/introduction.html)
+- [Quick start](https://onlyguo.github.io/smart-mvc/en/guide/getting-started.html)
+- [How a request moves through SmartMVC](https://onlyguo.github.io/smart-mvc/en/guide/how-it-works.html)
+- [Core features](https://onlyguo.github.io/smart-mvc/en/features/response.html)
+- [Authentication and authorization](https://onlyguo.github.io/smart-mvc/en/auth/overview.html)
+- [Configuration reference](https://onlyguo.github.io/smart-mvc/en/reference/configuration.html)
+- [API reference](https://onlyguo.github.io/smart-mvc/en/reference/api.html)
 
 ## Build from source
 
@@ -336,7 +336,7 @@ Generate the static site in `docs/.vuepress/dist`:
 npm run build
 ```
 
-The [GitHub Pages workflow](./.github/workflows/deploy-docs.yml) builds and deploys the documentation on pushes to `main`, and can also be started manually.
+The GitHub Pages workflow builds and deploys the documentation on pushes to `main`, and can also be started manually.
 
 ## Contributing
 
@@ -358,4 +358,4 @@ npm run build
 
 ## License
 
-SmartMVC is available under the [Apache License 2.0](./LICENSE). Copyright and attribution information is provided in [NOTICE](./NOTICE).
+SmartMVC is available under the Apache License 2.0. Copyright and attribution information is provided in the repository's `NOTICE` file.

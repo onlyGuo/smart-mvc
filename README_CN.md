@@ -15,16 +15,16 @@
 <p align="center">
   <img alt="Java 17+" src="https://img.shields.io/badge/Java-17%2B-ED8B00?style=flat-square&amp;logo=openjdk&amp;logoColor=white">
   <img alt="Spring Boot 3.5.7" src="https://img.shields.io/badge/Spring_Boot-3.5.7-6DB33F?style=flat-square&amp;logo=springboot&amp;logoColor=white">
-  <a href="https://github.com/onlyGuo/smart-mvc/actions/workflows/deploy-docs.yml"><img alt="文档部署" src="https://github.com/onlyGuo/smart-mvc/actions/workflows/deploy-docs.yml/badge.svg"></a>
-  <a href="./LICENSE"><img alt="Apache License 2.0" src="https://img.shields.io/badge/License-Apache_2.0-blue.svg?style=flat-square"></a>
+  <a href="https://onlyguo.github.io/smart-mvc/"><img alt="文档部署" src="https://github.com/onlyGuo/smart-mvc/actions/workflows/deploy-docs.yml/badge.svg"></a>
+  <img alt="Apache License 2.0" src="https://img.shields.io/badge/License-Apache_2.0-blue.svg?style=flat-square">
 </p>
 
 <p align="center">
-  <a href="./docs/contents.md">完整文档</a> ·
-  <a href="./docs/guide/getting-started.md">快速开始</a> ·
-  <a href="./docs/auth/overview.md">认证授权</a> ·
-  <a href="./docs/reference/configuration.md">配置参考</a> ·
-  <a href="./spring-boot-starter-smart-mvc-example">示例项目</a>
+  <a href="https://onlyguo.github.io/smart-mvc/contents.html">完整文档</a> ·
+  <a href="https://onlyguo.github.io/smart-mvc/guide/getting-started.html">快速开始</a> ·
+  <a href="https://onlyguo.github.io/smart-mvc/auth/overview.html">认证授权</a> ·
+  <a href="https://onlyguo.github.io/smart-mvc/reference/configuration.html">配置参考</a> ·
+  <a href="https://onlyguo.github.io/smart-mvc/examples/login.html">示例项目</a>
 </p>
 
 ---
@@ -66,10 +66,10 @@ SmartMVC 刻意保持克制：
 
 | 模块 | Maven 坐标 | 职责 |
 | --- | --- | --- |
-| [`core`](./core) | `ink.icoding.mvc:core:1.0.0` | 不依赖 Spring 的注解、响应与配置模型、认证概念、权限匹配及异常类型 |
-| [`spring-boot-starter-smart-mvc`](./spring-boot-starter-smart-mvc) | `ink.icoding:spring-boot-starter-smart-mvc:1.0.0` | 自动配置、MVC Advice、Jackson 集成、请求日志、校验集成与认证拦截 |
-| [`spring-boot-starter-smart-mvc-example`](./spring-boot-starter-smart-mvc-example) | `ink.icoding:spring-boot-starter-smart-mvc-example:1.0.0` | 无需数据库的示例应用，演示响应、校验、时间处理、异常与内存登录鉴权 |
-| [`docs`](./docs) | — | 基于 VuePress 的中文、英文、日文与俄文文档 |
+| [`core`](https://onlyguo.github.io/smart-mvc/guide/introduction.html) | `ink.icoding.mvc:core:1.0.0` | 不依赖 Spring 的注解、响应与配置模型、认证概念、权限匹配及异常类型 |
+| [`spring-boot-starter-smart-mvc`](https://onlyguo.github.io/smart-mvc/guide/introduction.html) | `ink.icoding:spring-boot-starter-smart-mvc:1.0.0` | 自动配置、MVC Advice、Jackson 集成、请求日志、校验集成与认证拦截 |
+| [`spring-boot-starter-smart-mvc-example`](https://onlyguo.github.io/smart-mvc/examples/login.html) | `ink.icoding:spring-boot-starter-smart-mvc-example:1.0.0` | 无需数据库的示例应用，演示响应、校验、时间处理、异常与内存登录鉴权 |
+| [`docs`](https://onlyguo.github.io/smart-mvc/contents.html) | — | 基于 VuePress 的中文、英文、日文与俄文文档 |
 
 这样的拆分是有意为之：公共契约留在不依赖 Spring 的 Core 中，所有 Spring 相关实现都放在 Starter 中。
 
@@ -191,7 +191,7 @@ spring:
         mode: ANNOTATED
 ```
 
-Starter 自带 Spring Boot 配置元数据，因此 IDE 可以补全属性名称、默认值、说明与枚举选项。所有配置见[完整配置参考](./docs/reference/configuration.md)。
+Starter 自带 Spring Boot 配置元数据，因此 IDE 可以补全属性名称、默认值、说明与枚举选项。所有配置见[完整配置参考](https://onlyguo.github.io/smart-mvc/reference/configuration.html)。
 
 ## 认证与当前用户
 
@@ -256,7 +256,7 @@ public class ProfileService {
 > [!WARNING]
 > 没有自定义 `AuthInterceptor` 时，默认实现会放行请求，让空项目可以直接启动。需要真实认证的应用必须提供自己的实现。当前请求身份不会自动传播到 `@Async`、手动线程、响应式链路或 Spring MVC 异步回调中。
 
-完整生命周期与扩展方法见[认证授权](./docs/auth/overview.md)和[自定义认证](./docs/auth/custom-authentication.md)。
+完整生命周期与扩展方法见[认证授权](https://onlyguo.github.io/smart-mvc/auth/overview.html)和[自定义认证](https://onlyguo.github.io/smart-mvc/auth/custom-authentication.html)。
 
 ## 运行 Example
 
@@ -291,7 +291,7 @@ curl http://localhost:8080/auth/me \
   -H 'Authorization: Bearer example-admin-token'
 ```
 
-固定用户、明文密码和 Token 只用于本地学习与自动化测试。管理员与拒绝流程见[完整认证示例](./docs/examples/login.md)。
+固定用户、明文密码和 Token 只用于本地学习与自动化测试。管理员与拒绝流程见[完整认证示例](https://onlyguo.github.io/smart-mvc/examples/login.html)。
 
 ## 文档
 
@@ -299,20 +299,20 @@ curl http://localhost:8080/auth/me \
 
 | 语言 | 文档入口 |
 | --- | --- |
-| 简体中文 | [阅读中文文档](./docs/contents.md) |
-| English | [Read the English documentation](./docs/en/contents.md) |
-| 日本語 | [日本語ドキュメントを読む](./docs/ja/contents.md) |
-| Русский | [Читать документацию](./docs/ru/contents.md) |
+| 简体中文 | [阅读中文文档](https://onlyguo.github.io/smart-mvc/contents.html) |
+| English | [Read the English documentation](https://onlyguo.github.io/smart-mvc/en/contents.html) |
+| 日本語 | [日本語ドキュメントを読む](https://onlyguo.github.io/smart-mvc/ja/contents.html) |
+| Русский | [Читать документацию](https://onlyguo.github.io/smart-mvc/ru/contents.html) |
 
 常用中文入口：
 
-- [认识 SmartMVC](./docs/guide/introduction.md)
-- [快速开始](./docs/guide/getting-started.md)
-- [请求如何经过 SmartMVC](./docs/guide/how-it-works.md)
-- [核心功能](./docs/features/response.md)
-- [认证授权](./docs/auth/overview.md)
-- [配置参考](./docs/reference/configuration.md)
-- [API 参考](./docs/reference/api.md)
+- [认识 SmartMVC](https://onlyguo.github.io/smart-mvc/guide/introduction.html)
+- [快速开始](https://onlyguo.github.io/smart-mvc/guide/getting-started.html)
+- [请求如何经过 SmartMVC](https://onlyguo.github.io/smart-mvc/guide/how-it-works.html)
+- [核心功能](https://onlyguo.github.io/smart-mvc/features/response.html)
+- [认证授权](https://onlyguo.github.io/smart-mvc/auth/overview.html)
+- [配置参考](https://onlyguo.github.io/smart-mvc/reference/configuration.html)
+- [API 参考](https://onlyguo.github.io/smart-mvc/reference/api.html)
 
 ## 从源码构建
 
@@ -336,7 +336,7 @@ npm run dev
 npm run build
 ```
 
-[GitHub Pages 工作流](./.github/workflows/deploy-docs.yml)会在代码推送到 `main` 时构建并部署文档，也支持在 Actions 页面手动运行。
+GitHub Pages 工作流会在代码推送到 `main` 时构建并部署文档，也支持在 Actions 页面手动运行。
 
 ## 参与贡献
 
@@ -358,4 +358,4 @@ npm run build
 
 ## 开源协议
 
-SmartMVC 基于 [Apache License 2.0](./LICENSE) 开源，版权与署名信息见 [NOTICE](./NOTICE)。
+SmartMVC 基于 Apache License 2.0 开源，版权与署名信息见仓库中的 `NOTICE` 文件。
