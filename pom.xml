@@ -13,8 +13,8 @@
 
   <licenses>
     <license>
-      <name>GNU Affero General Public License v3.0</name>
-        <url>https://www.gnu.org/licenses/agpl-3.0.html</url>
+      <name>Apache License, Version 2.0</name>
+      <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
       <distribution>repo</distribution>
     </license>
   </licenses>
@@ -75,6 +75,21 @@
   </dependencyManagement>
 
   <build>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <filtering>false</filtering>
+      </resource>
+      <resource>
+        <directory>${project.basedir}/..</directory>
+        <filtering>false</filtering>
+        <targetPath>META-INF</targetPath>
+        <includes>
+          <include>LICENSE</include>
+          <include>NOTICE</include>
+        </includes>
+      </resource>
+    </resources>
     <plugins>
       <!-- Compiler -->
       <plugin>

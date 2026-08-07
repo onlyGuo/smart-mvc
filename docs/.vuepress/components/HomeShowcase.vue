@@ -218,7 +218,7 @@ async function copySnippet() {
 
     <section class="closing-section section-shell">
       <div class="closing-card"><div><p class="overline">{{ t.closingOverline }}</p><h2>{{ t.closingTitle }}</h2></div><a :href="pageLink('/guide/getting-started.html')"><span>{{ t.closingAction }}</span><b>↗</b></a></div>
-      <footer class="landing-footer"><strong>SmartMVC</strong><span>{{ t.footer }}</span><small>AGPL-3.0 · 2026</small></footer>
+      <footer class="landing-footer"><strong>SmartMVC</strong><span>{{ t.footer }}</span><small>Apache-2.0 · 2026</small></footer>
     </section>
   </div>
 </template>

@@ -1,62 +1,110 @@
-# SmartMVC
+<h1 align="center">SmartMVC</h1>
 
-[![Deploy documentation](https://github.com/onlyGuo/smart-mvc/actions/workflows/deploy-docs.yml/badge.svg)](https://github.com/onlyGuo/smart-mvc/actions/workflows/deploy-docs.yml)
+<p align="center">
+  <strong>The MVC essentials, thoughtfully handled. Everything else stays yours.</strong>
+</p>
 
-> 该做的，都帮你做好；不该做的，一律不碰。
+<p align="center">
+  A lightweight, focused enhancement layer for building consistent Spring MVC applications.
+</p>
 
-SmartMVC 是一个基于 Spring Boot 的轻量 MVC 增强框架。它把统一响应、异常处理、日期时间、请求日志和认证授权这些经常重复出现的基础工作整理成一致、可配置、可替换的能力，让 Controller 专注于业务本身。
+<p align="center">
+  <strong>English</strong> · <a href="./README_CN.md">简体中文</a>
+</p>
 
-它不会替代 Spring MVC，不要求业务类继承框架基类，也不会引入数据库或替应用决定 Spring Web、Bean Validation 的版本。你仍然使用熟悉的 `@RestController`、`@GetMapping` 和 `@RequestBody`，SmartMVC 只在合适的位置补齐通用能力。
+<p align="center">
+  <img alt="Java 17+" src="https://img.shields.io/badge/Java-17%2B-ED8B00?style=flat-square&amp;logo=openjdk&amp;logoColor=white">
+  <img alt="Spring Boot 3.5.7" src="https://img.shields.io/badge/Spring_Boot-3.5.7-6DB33F?style=flat-square&amp;logo=springboot&amp;logoColor=white">
+  <a href="https://github.com/onlyGuo/smart-mvc/actions/workflows/deploy-docs.yml"><img alt="Documentation deployment" src="https://github.com/onlyGuo/smart-mvc/actions/workflows/deploy-docs.yml/badge.svg"></a>
+  <a href="./LICENSE"><img alt="Apache License 2.0" src="https://img.shields.io/badge/License-Apache_2.0-blue.svg?style=flat-square"></a>
+</p>
 
-## 能力概览
+<p align="center">
+  <a href="./docs/en/contents.md">Documentation</a> ·
+  <a href="./docs/en/guide/getting-started.md">Quick start</a> ·
+  <a href="./docs/en/auth/overview.md">Authentication</a> ·
+  <a href="./docs/en/reference/configuration.md">Configuration</a> ·
+  <a href="./spring-boot-starter-smart-mvc-example">Example</a>
+</p>
 
-| 能力 | 说明 |
-| --- | --- |
-| 统一响应 | 自动包装普通 Controller 返回值，提供 `ApiResponse`、分页结果以及可配置的 `long` 序列化策略 |
-| 异常与校验 | 将业务异常、常见 HTTP 异常和参数校验错误转换为稳定的错误结构 |
-| 日期与时间 | 统一处理 `LocalDateTime`、`LocalDate`、`LocalTime`、`Instant`、`OffsetDateTime`、`ZonedDateTime` 和 `Date` 的输入、输出与时区 |
-| 请求日志 | 记录请求方法、地址、状态码和耗时，并使用实际 Controller 作为 logger 类别 |
-| 认证与授权 | 支持全量认证或 `@Auth` 按需认证、`@Anonymous`、排除路径、当前用户、角色与请求权限 |
-| 配置体验 | 所有选项集中在 `spring.smart.mvc.*`，并提供 Spring Boot 配置元数据供 IDE 补全 |
+---
 
-每项能力都可以独立配置。认证逻辑也不会被框架写死：应用可以实现自己的 `AuthInterceptor`，完成 Token 解析、身份构建和权限校验；没有自定义实现时，默认实现保持放行。
+SmartMVC is a lightweight enhancement framework built on Spring Boot. It brings the infrastructure that REST applications repeatedly build—consistent responses, exception handling, date and time support, request logging, validation integration, and extensible authentication—into one focused Starter.
 
-## 项目结构
+You keep writing familiar `@RestController`, `@GetMapping`, and `@RequestBody` code. SmartMVC quietly handles the shared MVC concerns around it.
 
-| 模块 | Maven 坐标 | 职责 |
+> [!IMPORTANT]
+> SmartMVC enhances Spring MVC; it does not replace it. It requires no framework base classes, introduces no database, and leaves your business model, dependency versions, and authentication strategy under your control.
+
+## Features
+
+| | Capability | What it gives you |
 | --- | --- | --- |
-| `core` | `ink.icoding.mvc:core:1.0.0` | 不依赖 Spring 的注解、响应模型、配置模型、身份与权限模型以及异常体系 |
-| `spring-boot-starter-smart-mvc` | `ink.icoding:spring-boot-starter-smart-mvc:1.0.0` | 配置绑定、自动配置、MVC 增强、Jackson、日志、异常处理与认证拦截 |
-| `spring-boot-starter-smart-mvc-example` | `ink.icoding:spring-boot-starter-smart-mvc-example:1.0.0` | 无数据库的完整示例应用，包含响应、校验、时间处理和内存登录鉴权 |
-| `docs` | — | 基于 VuePress 的中、英、日、俄多语言文档 |
+| 📦 | **Consistent responses** | Automatic wrapping for ordinary controller results, `ApiResponse<T>`, `PageResult<T>`, `void` handling, and configurable `long` serialization |
+| 🧯 | **Exceptions and validation** | A stack-trace-free exception hierarchy for common HTTP statuses, business errors, and stable validation responses |
+| 🕒 | **Date and time** | Consistent parsing, formatting, JSON serialization, time zones, and incomplete-input policies for Java temporal types |
+| 🧾 | **Request logging** | Method, URI, status, and elapsed time at a configurable level, using the Controller logger whenever a handler method is matched |
+| 🔐 | **Authentication and authorization** | `GLOBAL` and `ANNOTATED` modes, `@Auth`, `@Anonymous`, excluded paths, roles, named permissions, and `METHOD:/path/**` permissions |
+| 👤 | **Current identity** | A Spring-managed `CurrentAuth` facade for the current request's user, roles, permissions, and attributes |
+| 🧭 | **IDE-friendly configuration** | Metadata for every `spring.smart.mvc.*` property, including descriptions, defaults, and enum completion |
 
-## 环境与依赖边界
+Every capability is configurable. Authentication is also replaceable: provide an `AuthInterceptor<T>` bean to connect SmartMVC to your own token, user, role, and permission model.
 
-- Java 17 或更高版本；
-- Spring Boot 3.2 或更高版本；
-- 当前项目的构建与测试基线为 Spring Boot 3.5.7；
-- 使用 Maven 构建 Java 模块，使用 Node.js 与 npm 构建文档。
+## Design boundaries
 
-Starter 不会把 Spring Web 或 Bean Validation 打进发布产物，也不会把它们的版本传递给应用：
+SmartMVC is intentionally narrow:
 
-- `spring-boot-starter-web` 在 Starter 中使用 `provided` 作用域，由应用显式引入；
-- `spring-boot-starter-validation` 不属于 Starter 依赖，需要参数校验时由应用显式引入；
-- 两者的实际版本由应用自己的 Spring Boot Parent 或 BOM 管理。
+- no custom web runtime and no replacement for Spring MVC;
+- no required Controller or Service base classes;
+- no database, user table, session store, or prescribed token format;
+- no ownership of the application's Spring Web or Bean Validation versions;
+- no shared singleton field containing request identity.
 
-这样，SmartMVC 可以增强已有的 Spring MVC 应用，同时不干预应用的依赖治理。
+This keeps the framework useful without making the application feel like framework code.
 
-## 快速接入
+## Modules
 
-在已经使用 Spring Boot Parent 或 BOM 管理依赖版本的项目中添加：
+| Module | Maven coordinates | Responsibility |
+| --- | --- | --- |
+| [`core`](./core) | `ink.icoding.mvc:core:1.0.0` | Spring-independent annotations, response and configuration models, authentication concepts, permission matching, and exception types |
+| [`spring-boot-starter-smart-mvc`](./spring-boot-starter-smart-mvc) | `ink.icoding:spring-boot-starter-smart-mvc:1.0.0` | Auto-configuration, MVC advice, Jackson integration, request logging, validation integration, and authentication interception |
+| [`spring-boot-starter-smart-mvc-example`](./spring-boot-starter-smart-mvc-example) | `ink.icoding:spring-boot-starter-smart-mvc-example:1.0.0` | A database-free application demonstrating responses, validation, temporal handling, exceptions, and in-memory authentication |
+| [`docs`](./docs) | — | VuePress documentation in Chinese, English, Japanese, and Russian |
+
+The split is deliberate: shared contracts remain in the Spring-free Core, while Spring-specific behavior stays in the Starter.
+
+## Requirements
+
+- Java 17 or later for the Starter and Example;
+- Spring Boot 3, with 3.5.7 as the current build and test baseline;
+- Maven for building the Java modules;
+- Node.js 24 and npm only when developing the documentation.
+
+The standalone Core module targets Java 8.
+
+### Dependency ownership
+
+> [!NOTE]
+> The Starter deliberately does not supply Spring Web or Bean Validation as application dependencies. Your Spring Boot parent or BOM remains the single source of their versions.
+
+- `spring-boot-starter-web` has `provided` scope inside the SmartMVC Starter, so the application declares it explicitly.
+- `spring-boot-starter-validation` is not a Starter dependency; add it only when the application needs Bean Validation.
+- Neither dependency is bundled into the published SmartMVC artifacts.
+
+## Quick start
+
+### 1. Add the dependencies
+
+In an application already using the Spring Boot parent or BOM:
 
 ```xml
-<!-- 由应用提供：Spring MVC -->
+<!-- Required: supplied and versioned by the application -->
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-web</artifactId>
 </dependency>
 
-<!-- 由应用按需提供：Bean Validation -->
+<!-- Optional: add when using Bean Validation -->
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-validation</artifactId>
@@ -70,16 +118,26 @@ Starter 不会把 Spring Web 或 Bean Validation 打进发布产物，也不会�
 </dependency>
 ```
 
-这里的 `1.0.0` 是当前仓库版本。若该构件尚未存在于你配置的 Maven 仓库中，请先在本仓库根目录执行 `mvn install` 安装到本地仓库。
+`1.0.0` is the current repository version. If it is not available from your configured Maven repository yet, install this project locally first:
 
-接下来照常编写 Controller，无需为了启动 SmartMVC 添加额外配置：
+```bash
+mvn install
+```
+
+### 2. Write a normal Controller
 
 ```java
+package com.example.demo;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.time.LocalDateTime;
+
 @RestController
-@RequestMapping("/hello")
 public class HelloController {
 
-    @GetMapping
+    @GetMapping("/hello")
     public Greeting hello() {
         return new Greeting("Hello, SmartMVC", LocalDateTime.now());
     }
@@ -89,46 +147,182 @@ public class HelloController {
 }
 ```
 
-普通返回值会按默认规则包装为统一响应，日期时间也会使用一致的格式输出。需要调整行为时，再在 `application.yaml` 中配置 `spring.smart.mvc.*` 即可；完整选项见[配置参考](docs/reference/configuration.md)。
+No SmartMVC base class or startup configuration is required.
 
-## 文档
-
-第一次使用，建议从对应语言的完整目录开始。文档按照“认识框架 → 快速接入 → 核心功能 → 认证授权 → 完整示例 → 参考手册”的顺序组织：
-
-- [中文文档](docs/contents.md)
-- [English documentation](docs/en/contents.md)
-- [日本語ドキュメント](docs/ja/contents.md)
-- [Документация на русском](docs/ru/contents.md)
-
-## 运行 Example
-
-Example 使用内存账户和固定 Token 演示完整登录鉴权流程，不需要数据库或其他外部服务。
+### 3. Call the endpoint
 
 ```bash
-# 在本地安装各模块
+curl http://localhost:8080/hello
+```
+
+The ordinary return value is wrapped automatically:
+
+```json
+{
+  "success": true,
+  "code": "OK",
+  "message": "success",
+  "data": {
+    "message": "Hello, SmartMVC",
+    "time": "2026-08-07 10:30:00"
+  },
+  "timestamp": "1786069800000"
+}
+```
+
+Date and time values use a consistent format. `long` values are strings by default to prevent precision loss in JavaScript clients.
+
+## Configuration
+
+SmartMVC works with sensible defaults. Change only what your application needs under the `spring.smart.mvc` namespace:
+
+```yaml
+spring:
+  smart:
+    mvc:
+      response:
+        success-message: ok
+        long-as-string: true
+      date-time:
+        zone-id: Asia/Shanghai
+      request-log:
+        level: INFO
+      auth:
+        mode: ANNOTATED
+```
+
+The Starter includes Spring Boot configuration metadata, so supported properties, defaults, descriptions, and enum values appear in IDE completion. See the [complete configuration reference](./docs/en/reference/configuration.md) for every option.
+
+## Authentication and the current user
+
+SmartMVC supports two authentication scopes:
+
+| Mode | Behavior |
+| --- | --- |
+| `ANNOTATED` | Authenticate only Controller types and methods marked with `@Auth` |
+| `GLOBAL` | Authenticate every Controller endpoint except `@Anonymous` handlers and `exclude-paths` |
+
+`ANNOTATED` is the default.
+
+```java
+@Auth(roles = "admin", permissions = "user:read")
+@GetMapping("/users")
+public List<UserView> users() {
+    return userService.findAll();
+}
+```
+
+Connect your own authentication logic by registering an `AuthInterceptor<T>` bean:
+
+```java
+@Component
+public class TokenAuthInterceptor implements AuthInterceptor<AppUser> {
+
+    private final TokenService tokenService;
+
+    public TokenAuthInterceptor(TokenService tokenService) {
+        this.tokenService = tokenService;
+    }
+
+    @Override
+    public AuthPrincipal<AppUser> authenticate(
+            String token,
+            HttpServletRequest request) {
+        return tokenService.authenticate(token);
+    }
+}
+```
+
+Then inject `CurrentAuth` anywhere Spring manages the object:
+
+```java
+@Service
+public class ProfileService {
+
+    private final CurrentAuth currentAuth;
+
+    public ProfileService(CurrentAuth currentAuth) {
+        this.currentAuth = currentAuth;
+    }
+
+    public AppUser currentUser() {
+        return currentAuth.getUser(AppUser.class);
+    }
+}
+```
+
+`CurrentAuth` is a singleton facade backed by request-thread context. Synchronous Servlet requests are isolated and the identity is cleared after completion.
+
+> [!WARNING]
+> Without a custom `AuthInterceptor`, the default implementation permits requests so a new project can start immediately. Applications that require real authentication must provide their own implementation. The request context is not automatically propagated to `@Async` methods, manually created threads, reactive pipelines, or Spring MVC asynchronous callbacks.
+
+Read [authentication and authorization](./docs/en/auth/overview.md) and [custom authentication](./docs/en/auth/custom-authentication.md) for the full lifecycle and extension points.
+
+## Run the Example
+
+The Example uses in-memory accounts and fixed demonstration tokens. It needs no database or external service.
+
+```bash
+# Install all modules from the repository root
 mvn install -DskipTests
 
-# 启动示例应用
+# Start the Example application
 mvn -f spring-boot-starter-smart-mvc-example/pom.xml spring-boot:run
 ```
 
-启动后可以先访问匿名接口：
+Try the anonymous endpoint:
 
 ```bash
 curl http://localhost:8080/auth/public
 ```
 
-登录、当前用户、角色与权限检查的完整请求过程见[登录鉴权示例](docs/examples/login.md)。示例账户仅用于本地学习与自动化测试，请勿用于生产环境。
+Sign in as the demonstration administrator:
 
-## 本地构建
+```bash
+curl -X POST http://localhost:8080/auth/login \
+  -H 'Content-Type: application/json' \
+  -d '{"username":"admin","password":"admin123"}'
+```
 
-验证全部 Java 模块与测试：
+Use the returned token to read the current identity:
+
+```bash
+curl http://localhost:8080/auth/me \
+  -H 'Authorization: Bearer example-admin-token'
+```
+
+The fixed users, plain-text passwords, and tokens exist only for local learning and automated tests. See the [complete authentication example](./docs/en/examples/login.md) for the administrator and rejection flows.
+
+## Documentation
+
+The guides move from first principles to detailed references:
+
+| Language | Documentation |
+| --- | --- |
+| English | [Read the English documentation](./docs/en/contents.md) |
+| 简体中文 | [阅读中文文档](./docs/contents.md) |
+| 日本語 | [日本語ドキュメントを読む](./docs/ja/contents.md) |
+| Русский | [Читать документацию](./docs/ru/contents.md) |
+
+Useful English entry points:
+
+- [What is SmartMVC?](./docs/en/guide/introduction.md)
+- [Quick start](./docs/en/guide/getting-started.md)
+- [How a request moves through SmartMVC](./docs/en/guide/how-it-works.md)
+- [Core features](./docs/en/features/response.md)
+- [Authentication and authorization](./docs/en/auth/overview.md)
+- [Configuration reference](./docs/en/reference/configuration.md)
+- [API reference](./docs/en/reference/api.md)
+
+## Build from source
+
+Run the complete Java build and test suite:
 
 ```bash
 mvn clean verify
 ```
 
-本地预览文档：
+Install the documentation dependencies and start the local preview:
 
 ```bash
 cd docs
@@ -136,7 +330,25 @@ npm ci
 npm run dev
 ```
 
-构建静态文档：
+Generate the static site in `docs/.vuepress/dist`:
+
+```bash
+npm run build
+```
+
+The [GitHub Pages workflow](./.github/workflows/deploy-docs.yml) builds and deploys the documentation on pushes to `main`, and can also be started manually.
+
+## Contributing
+
+Issues and focused pull requests are welcome. Please preserve the module boundaries, add tests for behavior changes, and run the relevant verification commands before submitting a change.
+
+For Java changes:
+
+```bash
+mvn clean verify
+```
+
+For documentation changes:
 
 ```bash
 cd docs
@@ -144,14 +356,6 @@ npm ci
 npm run build
 ```
 
-静态文件会生成到 `docs/.vuepress/dist`。
+## License
 
-## 文档发布
-
-推送到 `main` 分支或在 Actions 页面手动运行 [Deploy documentation to GitHub Pages](.github/workflows/deploy-docs.yml)，都会重新构建并发布文档。工作流会读取 GitHub Pages 的实际基础路径，因此项目站点与自定义域名都不需要在源码中硬编码地址。
-
-第一次启用时，需要在仓库的 **Settings → Pages → Build and deployment → Source** 中选择 **GitHub Actions**。如果仓库的默认分支不是 `main`，请同步修改工作流中的触发分支。
-
-## 许可证
-
-项目根 POM 将许可证声明为 [GNU Affero General Public License v3.0](https://www.gnu.org/licenses/agpl-3.0.html)。使用、修改或分发本项目之前，请阅读并遵守该许可证条款。
+SmartMVC is available under the [Apache License 2.0](./LICENSE). Copyright and attribution information is provided in [NOTICE](./NOTICE).
